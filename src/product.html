@@ -1,0 +1,20 @@
+<template>
+  <div class="column" repeat.for="product of products">
+    <div class="ui segment">
+      <div class="ui card">
+        <div class="image">
+          <img src="${product.img}" alt="" />
+        </div>
+        <div class="content">
+          <p class="header">${product.name}</p>
+          <p>${product.category}</p>
+          <p>${product.price}</p>
+          <p>${Suma()}</p>
+          <button click.delegate="handleClick(product.id)">
+            adicionar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+  <require from="./product"></require>
+  <require from="./searcher.html"></require>
+  <div class="ui container">
+    <h1>${message}</h1>
+    <input type="text" />
+    <p>${Suma()}</p>
+    <searcher></searcher>
+  </div>
+
+  <div class="ui container">
+    <div class="ui three column padded grid">
+      <!-- <div class="row"> -->
+      <product class="row"></product>
+      <!-- </div> -->
+    </div>
+  </div>
+</template>
