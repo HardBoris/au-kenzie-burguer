@@ -1,18 +1,35 @@
 <template>
   <require from="./product"></require>
-  <require from="./searcher.html"></require>
+  <require from="./searcher"></require>
   <div class="ui container">
     <h1>${message}</h1>
-    <input type="text" />
-    <p>${Suma()}</p>
-    <searcher></searcher>
   </div>
-
+  
   <div class="ui container">
-    <div class="ui three column padded grid">
-      <!-- <div class="row"> -->
-      <product class="row"></product>
-      <!-- </div> -->
+    <div>
+      <input type="text" value.bind="busca">
+    </div>
+    <div class="ui three column grid">
+      <div class="row">
+        <div repeat.for="product of total.products | prod: busca">
+          <div class="ui segment">
+            <div class="ui card">
+              <div class="image">
+                <img src="${product.img}" alt="" />
+              </div>
+              <div class="content">
+                <p class="header">${product.name}</p>
+                <p>${product.category}</p>
+                <p>${product.price}</p>
+                <p>${Suma()}</p>
+                <button click.delegate="total.handleClick(product.id)">
+                  adicionar al carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

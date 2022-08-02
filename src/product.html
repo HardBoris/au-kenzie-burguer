@@ -1,5 +1,7 @@
 <template>
-  <div class="column" repeat.for="product of products">
+  <require from="./searcher"></require>
+  <!-- <searcher busca.bind="produto"></searcher> -->
+  <div class="column" repeat.for="product of products | prod: busca">
     <div class="ui segment">
       <div class="ui card">
         <div class="image">
