@@ -1,0 +1,9 @@
+<template>
+  <require from="./product"></require>
+
+  <input type="text" value.bind="prueba" />
+
+  <div repeat.for="item of products">
+    <product busca.bind="prueba" item.bind="item"></product>
+  </div>
+</template>
