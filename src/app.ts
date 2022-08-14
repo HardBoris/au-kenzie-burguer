@@ -1,8 +1,7 @@
-import { bindable } from 'aurelia-framework';
+import { bindable } from "aurelia-framework";
 import { Product } from "./product";
 export class App {
-  public message = "Hello World!";
-  total = new Product();
+  public message = "Kenzie Burguer";
 
   /*
   products = [

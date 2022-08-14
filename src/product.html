@@ -1,22 +1,28 @@
 <template>
-  <require from="./searcher"></require>
-  <!-- <searcher busca.bind="produto"></searcher> -->
-  <div class="column" repeat.for="product of products | prod: busca">
-    <div class="ui segment">
-      <div class="ui card">
-        <div class="image">
-          <img src="${product.img}" alt="" />
-        </div>
-        <div class="content">
-          <p class="header">${product.name}</p>
-          <p>${product.category}</p>
-          <p>${product.price}</p>
-          <p>${Suma()}</p>
-          <button click.delegate="handleClick(product.id)">
-            adicionar al carrito
-          </button>
+  <!-- <require from="./searcher"></require>
+  <searcher value.bind="prueba"></searcher> -->
+  <!-- <div class="ui container"> -->
+  <div class="ui three column grid">
+    <div class="row" style="justify-content: space-between">
+      <div repeat.for="product of products | prod: prueba">
+        <div class="ui segment">
+          <div class="ui card">
+            <div class="image">
+              <img src="${product.img}" alt="" />
+            </div>
+            <div class="content">
+              <p class="header">${product.name}</p>
+              <p>${product.category}</p>
+              <p>${product.price}</p>
+              <p>${Suma()}</p>
+              <button click.delegate="total.handleClick(product.id)">
+                adicionar al carrito
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- </div> -->
 </template>

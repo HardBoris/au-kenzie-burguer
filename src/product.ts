@@ -1,11 +1,7 @@
-import { bindable } from 'aurelia-framework';
+import { bindable } from "aurelia-framework";
 
 export class Product {
-  @bindable produto: string = null;
-  name: string;
-  category: string;
-  price: number;
-  img: string;
+  @bindable produto: object;
 
   products = [
     {
@@ -63,9 +59,7 @@ export class Product {
         item.name.toLowerCase() === opcion.toLowerCase()
     );
   };
-  /*
-  addProduct = () => {}
-*/
+
   handleClick = (productId: number) => {
     this.currentSale = [
       ...this.currentSale,
@@ -81,12 +75,14 @@ export class Product {
       .toFixed(2));
 }
 
-// export class prodValueConverter {
-//   toView(items: Product[], search: string){
-//     if (search) {
-//       console.log(search)
-//       // return items.filter((ele) => ele.name.toLowerCase().includes(search.toLowerCase()))
-//       return items.filter((ele) => console.log(ele.name))
-//     } else return items;
-//   }
-// }
+export class prodValueConverter {
+  toView(products, search: string) {
+    if (search) {
+      console.log(search);
+      return products.filter((ele) =>
+        ele.name.toLowerCase().includes(search.toLowerCase())
+      );
+      // return items.filter((ele) => console.log(ele.name))
+    } else return products;
+  }
+}
