@@ -1,7 +1,7 @@
 <template>
   <require from="./searcher"></require>
   <!-- <searcher busca.bind="produto"></searcher> -->
-  <div class="column" repeat.for="product of products | prod: busca">
+  <div class="column" repeat.for="product of productService.products">
     <div class="ui segment">
       <div class="ui card">
         <div class="image">
