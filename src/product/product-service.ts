@@ -1,8 +1,4 @@
-import { Product } from "product";
-
-export class App {
-  public message = "Kenzie Burguer";
-
+export class ProductService {
   products = [
     {
       id: 1,
@@ -49,12 +45,10 @@ export class App {
   ];
 }
 
-export class prodValueConverter {
-  toView(items: Product[], search: string) {
-    if (search) {
-      console.log(search);
-      // return items.filter((ele) => ele.name.toLowerCase().includes(search.toLowerCase()))
-      return items.filter((ele) => console.log(ele.name));
-    } else return items;
-  }
+export interface ProductType {
+  id: number;
+  name: string;
+  category: string;
+  price: number;
+  img: string;
 }
