@@ -43,12 +43,15 @@ export class Product {
       .toFixed(2)); */
 }
 
-/* export class prodValueConverter {
-  toView(items: Product[], search: string) {
+export class ProdValueConverter {
+  toView(items: ProductType[], search: string) {
     if (search) {
       console.log(search);
-      // return items.filter((ele) => ele.name.toLowerCase().includes(search.toLowerCase()))
-      return items.filter((ele) => console.log(ele.name));
+      // return items.filter((ele) =>
+      //   ele.name.toLowerCase().includes(search.toLowerCase())
+      // );
+      // return items.filter((ele) => console.log(ele.name));
+      return items;
     } else return items;
   }
-} */
+}

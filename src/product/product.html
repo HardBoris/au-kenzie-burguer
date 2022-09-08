@@ -1,7 +1,10 @@
-<template>
+<template bindable="busca">
   <div class="ui three column grid">
     <div class="ui row">
-      <div class="ui column" repeat.for="item of productService.products">
+      <div
+        class="ui column"
+        repeat.for="item of productService.products | prod:busca"
+      >
         <div class="ui segment">
           <div class="ui card">
             <div class="image">

@@ -3,11 +3,14 @@
   <require from="../product/product"></require>
   <require from="../searcher/searcher"></require>
   <div class="ui container">
-    <h1>${message}</h1>
-    <searcher
-      placeholder="Busque su producto favorito"
-      label="Search"
-    ></searcher>
-    <product></product>
+    <div class="ui segment">
+      <h1>${message}</h1>
+      <searcher
+        value="prueba"
+        placeholder="Busque su producto favorito"
+        label="Search"
+      ></searcher>
+    </div>
+    <product busca="prueba"></product>
   </div>
 </template>

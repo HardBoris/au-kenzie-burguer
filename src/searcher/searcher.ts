@@ -1,12 +1,30 @@
-import { autoinject, bindable } from "aurelia-framework";
-import { SearcherService } from "./searcher-service";
+import {
+  observable,
+  autoinject,
+  bindable,
+  bindingMode,
+} from "aurelia-framework";
 
 @autoinject
-export class Searcher {
+export class Search {
+  @bindable({ defaultBindingMode: bindingMode.twoWay })
+  @observable
+  field_search = null;
   @bindable type = "text";
+  @bindable hint: string;
   @bindable label: string;
-  @bindable placeholder = "";
-  @bindable value: string;
+  isEmpty = true;
+  isError = false;
 
-  constructor(private searcher: SearcherService) {}
+  field_searchChanged(newValue) {
+    if (newValue) {
+      this.field_search = newValue;
+      this.isEmpty = false;
+    }
+  }
+
+  emptyText() {
+    this.field_search = null;
+    this.isEmpty = true;
+  }
 }
