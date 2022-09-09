@@ -1,0 +1,16 @@
+.titulo {
+  color: red;
+  text-align: center;
+}
+.cap {
+  color: blue;
+  text-align: center;
+}
+.titulo,
+.cap {
+  font-weight: bold;
+}
+.rayado {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+}

@@ -1,6 +1,5 @@
+import { Searcher } from "./../searcher/searcher";
 export class Home {
-  message: string;
-  constructor() {
-    this.message = "Kenzie Burguer";
-  }
+  message = "Kenzie Burguer";
+  constructor(private ojo: Searcher) {}
 }

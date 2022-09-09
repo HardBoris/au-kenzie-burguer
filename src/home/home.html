@@ -6,11 +6,11 @@
     <div class="ui segment">
       <h1>${message}</h1>
       <searcher
-        value="prueba"
-        placeholder="Busque su producto favorito"
+        hint="Busque su producto favorito"
+        field_search.bind="valor"
         label="Search"
       ></searcher>
     </div>
-    <product busca="prueba"></product>
+    <product busca.bind="valor"></product>
   </div>
 </template>

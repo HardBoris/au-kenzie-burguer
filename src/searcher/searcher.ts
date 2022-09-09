@@ -6,7 +6,7 @@ import {
 } from "aurelia-framework";
 
 @autoinject
-export class Search {
+export class Searcher {
   @bindable({ defaultBindingMode: bindingMode.twoWay })
   @observable
   field_search = null;
