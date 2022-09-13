@@ -1,5 +1,5 @@
 <template>
-  <h3>soy la pagina inicial</h3>
+  <!-- <h3>soy la pagina inicial</h3> -->
   <require from="../product/product"></require>
   <require from="../searcher/searcher"></require>
   <div class="ui container">
@@ -10,6 +10,7 @@
         field_search.bind="valor"
         label="Search"
       ></searcher>
+      <a href="login">login</a>
     </div>
     <product busca.bind="valor"></product>
   </div>

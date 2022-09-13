@@ -1,3 +1,9 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4fbfd;
+}
+
 .titulo {
   color: red;
   text-align: center;
@@ -13,4 +19,17 @@
 .rayado {
   border: 1px solid rgba(34, 36, 38, 0.15);
   border-radius: 0.28571429rem;
+}
+small {
+  color: red;
+}
+i {
+  font-size: xx-large;
+}
+.ui.container {
+  height: 100vh;
+  /* width: 70vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

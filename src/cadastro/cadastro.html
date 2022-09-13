@@ -1,0 +1,90 @@
+<template>
+  <div class="ui container">
+    <div class="ui segment">
+      <div class="ui two column grid segment" style="margin: 0">
+        <div
+          class="column"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div>
+            <div class="ui comments">
+              <div>
+                <h1 class="header">
+                  Burguer <small class="header">Kenzie</small>
+                </h1>
+              </div>
+              <div class="ui segment" style="display: flex">
+                <div style="font-size: xx-large; padding-right: 10px">
+                  <i class="youtube icon"></i>
+                </div>
+                <div class="content">
+                  <p>
+                    A vida é como um sanduíche, é preciso rechea-la com os
+                    melhores ingredientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui form">
+            <h1>Cadastro</h1>
+            <div class="${isError && !data.email ? 'error' : ''} field">
+              <!-- <label
+                >${isError && errorList.includes("name") ? "O campo Nome é
+                obrigatório" : "Email"}</label
+              > -->
+              <input type="text" value.bind="data.nome" placeholder="Nome" />
+            </div>
+            <div class="${isError && !data.senha ? 'error' : ''} field">
+              <!-- <label
+                >${isError && errorList.includes("name") ? "O campo Nome é
+                obrigatório" : "Senha"}</label
+              > -->
+              <input type="text" value.bind="data.email" placeholder="Email" />
+            </div>
+            <div class="${isError && !data.email ? 'error' : ''} field">
+              <!-- <label
+                >${isError && errorList.includes("name") ? "O campo Nome é
+                obrigatório" : "Email"}</label
+              > -->
+              <input type="text" value.bind="data.senha" placeholder="Senha" />
+            </div>
+            <div class="${isError && !data.senha ? 'error' : ''} field">
+              <!-- <label
+                >${isError && errorList.includes("name") ? "O campo Nome é
+                obrigatório" : "Senha"}</label
+              > -->
+              <input
+                type="text"
+                value.bind="data.confirma"
+                placeholder="Confirma"
+              />
+            </div>
+            <div>
+              <button
+                class="ui fluid green button"
+                style="color: yellow"
+                click.delegate="dataSender()"
+              >
+                Salvar
+              </button>
+            </div>
+            <div>
+              <h5 class="header">
+                Já tem conta? Faça <a route-href="login">Login</a> para saborear
+                muitas delicias e matar a sua fome!
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
