@@ -1,10 +1,12 @@
 import { Router, RouterConfiguration } from "aurelia-router";
 import { PLATFORM } from "aurelia-framework";
+import { AuthorizeStep } from "aurelia-authentication";
 
 export class App {
   router: Router;
   configureRouter(config: RouterConfiguration, router: Router) {
     config.title = "Kenzie Burguer";
+    config.addPipelineStep("authorize", AuthorizeStep);
     config.map([
       {
         route: "home",
@@ -12,6 +14,7 @@ export class App {
         moduleId: PLATFORM.moduleName("./home/home"),
         nav: true,
         title: "Home",
+        auth: true,
       },
       {
         route: ["", "login"],
