@@ -1,20 +1,22 @@
 <template>
   <require from="./searcher"></require>
   <!-- <searcher busca.bind="produto"></searcher> -->
-  <div class="column" repeat.for="product of products | prod: busca">
-    <div class="ui segment">
-      <div class="ui card">
-        <div class="image">
-          <img src="${product.img}" alt="" />
-        </div>
-        <div class="content">
-          <p class="header">${product.name}</p>
-          <p>${product.category}</p>
-          <p>${product.price}</p>
-          <p>${Suma()}</p>
-          <button click.delegate="handleClick(product.id)">
-            adicionar al carrito
-          </button>
+  <div class="ui grid container" >
+    <div class="ui row">
+      <div class="ui segment" repeat.for="produto of productService.products">
+        <div class="ui card">
+          <div class="image">
+            <img src="${produto.img}" alt="" />
+          </div>
+          <div class="content">
+            <p class="header">${produto.name}</p>
+            <p>${produto.category}</p>
+            <p>${produto.price}</p>
+            <p>${Suma()}</p>
+            <button click.delegate="handleClick(product.id)">
+              adicionar al carrito
+            </button>
+          </div>
         </div>
       </div>
     </div>
